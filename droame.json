@@ -1,0 +1,42 @@
+{
+  "info": {
+    "_postman_id": "1a776bfb-0871-40a8-b940-c3d00afa0c01",
+    "name": "Droame.api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51603842",
+    "_collection_link": "https://go.postman.co/collection/51603842-1a776bfb-0871-40a8-b940-c3d00afa0c01?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Generate Invite",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"action\": \"generate\",\n  \"creator_code\": \"KRRISH-ADMIN\",\n  \"new_name\": \"Postman Test\",\n  \"new_details\": \"Created via Collection\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dsrtvy8wfe.execute-api.eu-north-1.amazonaws.com/",
+          "protocol": "https",
+          "host": [
+            "dsrtvy8wfe",
+            "execute-api",
+            "eu-north-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

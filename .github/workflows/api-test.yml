@@ -1,0 +1,32 @@
+name: Droame API Pipeline
+
+# TRIGGER: Run on every push to the main branch
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  api-testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Download your code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # 2. Install Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Install Newman (The Postman runner)
+      - name: Install Newman
+        run: npm install -g newman
+
+      # 4. Run the Test
+      # IMPORTANT: Ensure 'droame.json' is in your main folder!
+      - name: Run API Tests
+        run: newman run droame.json
